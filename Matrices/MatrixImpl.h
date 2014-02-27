@@ -1,8 +1,9 @@
 #ifndef MATRIXIMPL_H
 #define MATRIXIMPL_H
 
-#include "Double.h"
-#include "DoublePtr.h"
+#include "../Memory/Double.h"
+#include "../Memory/DoublePtr.h"
+#include "../Memory/DoubleRef.h"
 
 class MatrixImpl {
 

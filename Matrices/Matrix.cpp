@@ -1,6 +1,6 @@
 #include"Matrix.h"
-#include "Double.h"
-#include "DoubleRef.h"
+#include "../Memory/Double.h"
+#include "../Memory/DoubleRef.h"
 
 Matrix::Matrix()
 { 

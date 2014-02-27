@@ -1,6 +1,6 @@
 #include "DoublePtr.h"
 #include "Double.h"
-#include "Cache.h"
+#include "../modelisationcache/Cache.h"
 extern Cache moncache;
 
 DoublePtr::DoublePtr ()
@@ -16,7 +16,7 @@ DoublePtr::DoublePtr (Double * other)
 Double& DoublePtr::operator*(void) const
 {
 	cout << "Appel de * DoublePtr" <<endl;
-	//return *P;
+	return *P;
 
 	//return  moncache.get(*P);
 }

@@ -11,11 +11,11 @@
 
 using namespace std;
 
-class ExportedBy Double {
+class Double {
 
 	friend class DoubleRef;
-	ExportedBy friend ostream& operator<<(ostream& flux, const Double & other);// Opérateur externe permettant d'afficher le Double sur un flux ostream
-	ExportedBy friend Double operator*( const Double & a, const Double & b);
+    friend ostream& operator<<(ostream& flux, const Double & other);// Opérateur externe permettant d'afficher le Double sur un flux ostream
+    friend Double operator*( const Double & a, const Double & b);
 
 	public:
 	Double();//Constructeur sans argument

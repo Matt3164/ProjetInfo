@@ -1,7 +1,7 @@
-#include "Double.h"
-#include "DoublePtr.h"
-#include "DoubleRef.h"
-#include "Cache.h"
+#include "../Memory/Double.h"
+#include "../Memory/DoublePtr.h"
+#include "../Memory/DoubleRef.h"
+#include "../modelisationcache/Cache.h"
 
 static Cache moncache;
 Double fonction(const DoublePtr p);
@@ -191,7 +191,7 @@ int main ()
 	Double d4;
 	DoubleRef p4= d4;
 	p4 = 5.4;
-	cout << p4 <<"\n";
+	//cout << p4 <<"\n";
 
 	const DoublePtr p5 = new Double[5];
 

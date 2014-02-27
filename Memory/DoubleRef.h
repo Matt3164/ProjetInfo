@@ -9,7 +9,7 @@
 
 #include"DoublePtr.h"
 
-class ExportedBy DoubleRef {
+class DoubleRef {
 	public:
 	DoubleRef(Double & other);
 	DoubleRef operator=(const Double & other);

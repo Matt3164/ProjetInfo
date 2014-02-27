@@ -7,8 +7,8 @@
 #ifndef _MATRIX_H
 #define _MATRIX_H
 #include"MatrixImpl.h"
-#include "Double.h"
-#include "DoubleRef.h"
+#include "../Memory/Double.h"
+#include "../Memory/DoubleRef.h"
 
 class ExportedBy Matrix{
 	ExportedBy friend Matrix operator*(const Matrix & A, const Matrix & B); // Operateur * externe pour la classe Matrix

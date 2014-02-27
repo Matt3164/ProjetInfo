@@ -1,8 +1,8 @@
 
 #include"MatrixImpl.h"
-#include "Double.h"
-#include "DoublePtr.h"
-#include "DoubleRef.h"
+#include "../Memory/Double.h"
+#include "../Memory/DoublePtr.h"
+#include "../Memory/DoubleRef.h"
 #include <iostream>
 #define SIZE 2
 

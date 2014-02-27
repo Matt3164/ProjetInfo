@@ -20,7 +20,9 @@ Double & Double::operator=(const Double & other){
 	if (this!=&other) {
 		d=other.d;
 	return *this;
-	}
+	}else{
+    return *this;
+    }
 }
 
 Double & Double::operator+=( const Double  & other)

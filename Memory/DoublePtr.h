@@ -10,7 +10,7 @@
 #include"Double.h"
 #include "Cache.h"
 
-class ExportedBy DoublePtr {
+class DoublePtr {
 
 	friend class DoubleRef;
 
