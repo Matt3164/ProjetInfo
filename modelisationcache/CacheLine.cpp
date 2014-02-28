@@ -2,11 +2,12 @@
 #include <iostream>
 #include<math.h>
 #define w 4
+#define n 5
 
 
 CacheLine::CacheLine()
 {
-	int taille =(int) pow(2.0,w);
+	int taille = pow(2., w) / 8.;
 	tabligne = new double[taille];
 
 }
@@ -14,7 +15,7 @@ CacheLine::CacheLine()
 
 void CacheLine::load(double * p)
 {
-	double taille=pow(2.0,4);
+	double taille= pow(2., w) / 8.;
 
 	for(int i=0; i< taille;i++)
 	{
@@ -27,18 +28,32 @@ void CacheLine::load(double * p)
 }
 
 
-int CacheLine::tag(double* p){
+intptr_t CacheLine::tag(double* p){
 
-	return (((intptr_t )p >> 9)<< 9);
+	return (((intptr_t )p >> w)<< w);
+
 }
 
-int CacheLine::itag(int p){
+intptr_t CacheLine::itag(intptr_t p){
     
-	return (( p >> 9)<<9);
+	return (( p >> w)<< w);
+    
 }
+
 
 int CacheLine::decalage(double* p){
+    
+	return ((intptr_t) p - tag(p)) / 8;
+}
 
-	int a = ((intptr_t) p - xtag);
-    return a / 8.;
+double CacheLine::getLine(double * p){
+    
+    return tabligne[decalage(p)];
+
+}
+
+void CacheLine::setLine(double * p, double value){
+    
+    tabligne[decalage(p)] = value;
+    
 }

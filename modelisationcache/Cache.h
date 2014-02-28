@@ -9,7 +9,7 @@
 
 #include"CacheLine.h"
 
-class ExportedBy Cache {
+class Cache {
 
 public:
 	Cache();

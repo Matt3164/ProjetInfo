@@ -16,9 +16,8 @@ DoublePtr::DoublePtr (Double * other)
 Double& DoublePtr::operator*(void) const
 {
 	cout << "Appel de * DoublePtr" <<endl;
-	return *P;
-
-	//return  moncache.get(*P);
+    moncache.get(&((*P).d));
+    return *P ;
 }
 
 //DoubleRef DoublePtr::operator*(void)

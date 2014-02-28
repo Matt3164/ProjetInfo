@@ -14,6 +14,8 @@ using namespace std;
 class Double {
 
 	friend class DoubleRef;
+    friend class DoublePtr;
+    friend class Cache;
     friend ostream& operator<<(ostream& flux, const Double & other);// Opérateur externe permettant d'afficher le Double sur un flux ostream
     friend Double operator*( const Double & a, const Double & b);
 
